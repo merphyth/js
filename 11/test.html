@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aaa</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .mobile-interface {
+      display: none; 
+    }
+
+    .desktop-interface {
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .desktop-interface {
+      display: none; 
+    }
+
+    .mobile-interface {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+  
+<div class="desktop-interface">
+
+  <h1>Интерфейс для больших экранов</h1>
+  <p>Здесь находится контент для больших экранов.</p>
+</div>
+
+<div class="mobile-interface">
+  <h1>Интерфейс для мобильных устройств</h1>
+  <p>Здесь находится контент для мобильных устройств.</p>
+</div>
+
+</body>
+</html>

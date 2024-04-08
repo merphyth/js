@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проверка символов в поле ввода</title>
+</head>
+<body>
+
+<input type="text" id="myInput" oninput="checkInput()">
+<br>
+<label id="myLabel">text</label>
+
+<script>
+function checkInput() 
+{
+    let inputElement = document.getElementById('myInput');
+    let inputValue = inputElement.value;
+
+    let lastChar = inputValue.slice(-1);
+
+    if (!isNaN(parseInt(lastChar)) && lastChar != " ") 
+    {
+        inputElement.value = inputValue.slice(0, -1);
+    }
+}
+</script>
+
+</body>
+</html>

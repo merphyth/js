@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aaa</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .wrapper {
+        display: flex;
+        position: relative;
+    }
+
+    .block {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        border: 1px solid black;
+        overflow: hidden;
+        transition: transform 2s ease;
+    }
+
+    .wrapper:hover .block1 {
+        transform: translateX(-100px); 
+    }
+
+    .wrapper:hover .block2 {
+        transform: translateX(100px); 
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 2s ease;
+    }
+
+    .wrapper:hover .text {
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="text">ещкере</div>
+    </div>
+</div>
+</body>
+</html>

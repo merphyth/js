@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards</title>
+    <style>
+        .card-container {
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start;
+        }
+
+        .card {
+            width: 100px; 
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px; 
+            line-height: 150px;
+            margin: 0 10px; 
+        }
+
+        .red {
+            color: red; 
+        }
+
+        .black {
+            color: black; 
+        }
+    </style>
+</head>
+<body>
+    <p>PLAYER 1</p>
+    <div class="card-container">
+        <div class="card red"> Q&#x2665;</div> 
+        <div class="card red">K&#x2666;</div> 
+        <div class="card black">7&#x2660;</div> 
+        <div class="card black">8&#x2663;</div> 
+    </div>
+    <p>PLAYER 2</p>
+    <div class="card-container">
+        <div class="card red">3&#x2665;</div> 
+        <div class="card red">2&#x2666;</div> 
+        <div class="card black">A&#x2660;</div> 
+        <div class="card black">J&#x2663;</div> 
+    </div>
+</body>
+</html>

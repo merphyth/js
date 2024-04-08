@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ввод данных для маркера</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fill marker data</h1>
+    <form id="markerForm">
+        <label for="colorInput">Color:</label>
+        <input type="color" id="colorInput" name="color" required><br>
+
+        <label for="percentInput">capacity(%):</label>
+        <input type="number" id="percentInput" name="percent" min="1" max="100" required><br>
+
+        <label for="textInput">Text:</label>
+        <textarea id="textInput" name="text" rows="4" cols="50" required></textarea><br>
+
+        <button type="submit">Fill</button>
+    </form>
+
+    <div id="markerOutput" style="display: none;">
+        <h2>Output</h2>
+        <div id="markerText"></div>
+    </div>
+
+    <script>
+        document.getElementById("markerForm").addEventListener("submit", function(event) 
+        {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var color = formData.get("color");
+            var percent = formData.get("percent");
+            var text = formData.get("text");
+            var markerTextElement = document.getElementById("markerText");
+            markerTextElement.textContent = "";
+            var remainingInk = percent * 2;
+            for (var i = 0; i < remainingInk; i++) 
+            {
+                if (text[i] === ' ')
+                {
+                    charElement.textContent = text[i];
+                  continue
+                };
+                if (remainingInk <= 0) 
+                 {
+                  break
+                 };
+
+                var charElement = document.createElement("span");
+                charElement.textContent = text[i];
+                charElement.style.color = color;
+                markerTextElement.appendChild(charElement);
+            }
+            document.getElementById("markerOutput").style.display = "block";
+        });
+    </script>
+</body>
+</html>

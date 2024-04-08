@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cArs</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model</th>
+                <th>Max Speed</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="CARS">
+        </tbody>
+    </table>
+
+    <script>
+        const cars = [
+            { Id: 1, Model: "Toyota Camry", MaxSpeed: 180, Description: "GOOD CAR" },
+            { Id: 2, Model: "Honda Civic", MaxSpeed: 170, Description: "BAD CAR" },
+            { Id: 3, Model: "BMW X5", MaxSpeed: 250, Description: "DECENT CAR" }
+        ];
+        function UpdateCars() {
+            const CARSt = document.getElementById('CARS');
+            CARSt.innerHTML = '';
+
+            cars.forEach(car => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${car.Id}</td>
+                    <td>${car.Model}</td>
+                    <td>${car.MaxSpeed}</td>
+                    <td>${car.Description}</td>
+                `;
+                CARSt.appendChild(row);
+            });
+        }
+        window.onload = UpdateCars;
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Cars</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>List of Cars</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Model</th>
+                <th>Max Speed</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="carTableBody">
+        </tbody>
+    </table>
+
+    <script>
+        async function populateCarTable(cars) {
+            const carTableBody = document.getElementById('carTableBody');
+            carTableBody.innerHTML = '';
+
+            cars.forEach(car => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${car.Id}</td>
+                    <td>${car.Model}</td>
+                    <td>${car.MaxSpeed}</td>
+                    <td>${car.Description}</td>
+                `;
+                carTableBody.appendChild(row);
+            });
+        }
+        fetch('https://localhost:7139/api/cars')
+            .then(response => response.json())
+            .then(cars => populateCarTable(cars))
+            .catch(error => console.error('Error fetching cars:', error));
+            
+    </script>
+</body>
+</html>

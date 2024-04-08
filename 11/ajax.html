@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registration form</title>
+    <style>
+        #regForm b {
+            display: inline-block;
+            padding-top: 5px;
+            width: 100px;
+        }
+        
+        #regForm input[type="submit"] {
+            margin: 15px 150px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let request;
+        if (window.XMLHttpRequest) {
+            request = new XMLHttpRequest();
+        } else {
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        request.open("GET", "ajax.html");
+
+        request.onreadystatechange = function () {
+            console.log("readyState = " + request.readyState);
+            if (request.readyState === 4) {
+                alert(request.response);
+            }
+        }
+
+        request.send();
+    </script>
+</body>
+</html>
