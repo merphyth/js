@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1
+// let shoppingList = [
+//     { name: "Apples", quantity: 2, bought: false },
+//     { name: "Milk", quantity: 1, bought: true },
+//     { name: "Bread", quantity: 3, bought: false }
+// ];
+// function displayShoppingList() 
+// {
+//     console.log("Shopping List:");
+//     shoppingList.filter(item => !item.bought).forEach(item => {
+//         console.log(`${item.name} - ${item.quantity}`);
+//     });
+//     shoppingList.filter(item => item.bought).forEach(item => {
+//         console.log(`${item.name} - ${item.quantity}`);
+//     });
+// }
+// function addItemToShoppingList(name, quantity) 
+// {
+//     let existingItem = shoppingList.find(item => item.name === name);
+//     if (existingItem) {
+//         existingItem.quantity += quantity;
+//     } else {
+//         shoppingList.push({ name: name, quantity: quantity, bought: false });
+//     }
+// }
+// function buyProduct(name) 
+// {
+//     let itemToBuy = shoppingList.find(item => item.name === name);
+//     if (itemToBuy) {
+//         itemToBuy.bought = true;
+//     } else {
+//         console.log(`Product "${name}" not found in the shopping list.`);
+//     }
+// }
+// displayShoppingList();
+// addItemToShoppingList("Salt", 1);
+// addItemToShoppingList("Milk", 2);
+// buyProduct("Apples");
+// displayShoppingList();
+
+//2
+// let receipt = [
+//     { name: "Apple", quantity: 3, pricePerUnit: 0.5 },
+//     { name: "Banana", quantity: 2, pricePerUnit: 0.4 },
+//     { name: "Milk", quantity: 1, pricePerUnit: 1.2 },
+//     { name: "Bread", quantity: 2, pricePerUnit: 0.8 }
+// ];
+
+// function displayReceipt() 
+// {
+//     console.log("Receipt:");
+//     receipt.forEach(item => {
+//         console.log(`${item.name} - ${item.quantity} x $${item.pricePerUnit.toFixed(2)} = $${(item.quantity * item.pricePerUnit).toFixed(2)}`);
+//     });
+// }
+
+// function calculateTotal() 
+// {
+//     let total = 0;
+//     receipt.forEach(item => {
+//         total += item.quantity * item.pricePerUnit;
+//     });
+//     return total.toFixed(2);
+// }
+// function getMostExpensiveItem() 
+// {
+//     let mostExpensive = receipt.reduce((prev, current) => (prev.pricePerUnit > current.pricePerUnit) ? prev : current);
+//     return `${mostExpensive.name} - $${mostExpensive.pricePerUnit.toFixed(2)}`;
+// }
+// function calculateAveragePrice() 
+// {
+//     let totalPrice = 0;
+//     receipt.forEach(item => {
+//         totalPrice += item.quantity * item.pricePerUnit;
+//     });
+//     let averagePrice = totalPrice / receipt.reduce((acc, item) => acc + item.quantity, 0);
+//     return `$${averagePrice.toFixed(2)}`;
+// }
+// displayReceipt();
+// console.log("Total: $" + calculateTotal());
+// console.log("Most expensive item: " + getMostExpensiveItem());
+// console.log("Average price per item: " + calculateAveragePrice());
+
+//3
+// let styles = [
+//     { name: "color", value: "blue" },
+//     { name: "font-size", value: "16px" },
+//     { name: "text-align", value: "center" },
+//     { name: "text-decoration", value: "underline" }
+// ];
+
+// function displayStyledText(styles, text) 
+// {
+//     let styleString = styles.map(style => `${style.name}: ${style.value};`).join(" ");
+//     document.write(`<p style="${styleString}">${text}</p>`);
+// }
+// displayStyledText(styles, "sasassasa text twext");
+
+
+</script>
+</html>

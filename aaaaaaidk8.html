@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1
+//     function analyzeString(str) 
+//     {
+//     let letterCount = 0;
+//     let digitCount = 0;
+//     let otherCount = 0;
+//     for (let i = 0; i < str.length; i++) 
+//     {
+//         let char = str[i];
+//         if (/[a-zA-Z]/.test(char)) 
+//         {
+//             letterCount++;
+//         }
+//         else if (/[0-9]/.test(char)) 
+//         {
+//             digitCount++;
+//         }
+//         else 
+//         {
+//             otherCount++;
+//         }
+//     }
+//     console.log("Letters: " + letterCount);
+//     console.log("Digits: " + digitCount);
+//     console.log("Other characters: " + otherCount);
+// }
+// analyzeString("Hello World! 123");
+
+//2
+// function numberToWords(number) 
+// {
+//     let units = ['', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'];
+//     let tens = ['', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто'];
+//     let teens = ['одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать'];
+//     let tensDigit = Math.floor(number / 10);
+//     let unitsDigit = number % 10;
+//     if (tensDigit === 1 && unitsDigit > 0) 
+//     {
+//         return teens[unitsDigit - 1];
+//     } 
+//     else 
+//     {
+//         let result = tens[tensDigit];
+//         if (unitsDigit > 0) 
+//         {
+//             result += ' ' + units[unitsDigit];
+//         }
+//         return result.trim();
+//     }
+// }
+// console.log(numberToWords(35));
+// console.log(numberToWords(89));
+// console.log(numberToWords(12));
+
+//3
+// function transformString(str) 
+// {
+//     let transformedString = '';
+//     for (let i = 0; i < str.length; i++) 
+//     {
+//         let char = str[i];
+//         if (char >= 'a' && char <= 'z') 
+//         {
+//             transformedString += char.toUpperCase();
+//         } 
+//         else if (char >= 'A' && char <= 'Z') 
+//         {
+//             transformedString += char.toLowerCase();
+//         } else if (char >= '0' && char <= '9') 
+//         {
+//             transformedString += '_';
+//         } 
+//         else 
+//         {
+//             transformedString += char;
+//         }
+//     }
+//     return transformedString;
+// }
+// console.log(transformString("Hello World 123"));
+
+//5
+// function abbreviation(phrase) 
+// {
+//     let words = phrase.split(/[\s-]+/);
+//     let acronym = '';
+//     for (let i = 0; i < words.length; i++) 
+//     {
+//         acronym += words[i][0].toUpperCase();
+//     }
+//     return acronym;
+// }
+// console.log(abbreviation("keep yourself safe"));
+// console.log(abbreviation("cascading style sheets"));
+
+//6
+// function concatenateStrings(...strings) 
+// {
+//     return strings.join('');
+// }
+// let result = concatenateStrings("Hello", "world", "!");
+// console.log(result); 
+
+//7
+// function calculator(expression) 
+// {
+//     let operands = expression.split(/[+\-*\/]/);
+//     let operator = expression.match(/[+\-*\/]/);
+//     let operand1 = parseFloat(operands[0]);
+//     let operand2 = parseFloat(operands[1]);
+//     switch (operator[0]) 
+//     {
+//         case '+':
+//             return operand1 + operand2;
+//         case '-':
+//             return operand1 - operand2;
+//         case '*':
+//             return operand1 * operand2;
+//         case '/':
+//             if (operand2 === 0) 
+//             {
+//                 return "Error: Division by zero";
+//             }
+//             return operand1 / operand2;
+//         default:
+//             return "what?";
+//     }
+// }
+// console.log(calculator("10 + 5")); 
+// console.log(calculator("20 - 7"));  
+// console.log(calculator("8 * 4"));   
+// console.log(calculator("12 / 3")); 
+// console.log(calculator("15 / 0"));
+
+//9
+// function splitString(str, delimiter) 
+// {
+//     return str.split(delimiter);
+// }
+// let str = "10/08/2020";
+// let delimiter = "/";
+// let result = splitString(str, delimiter);
+// console.log(result);
+
+</script>
+</html>

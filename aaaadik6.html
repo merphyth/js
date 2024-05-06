@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1
+//     const car = 
+//     {
+//     manufacturer: "Toyota",
+//     model: "Camry",
+//     year: 2022,
+//     averageSpeed: 60 
+//     };
+
+// function displayCarInfo(car) 
+// {
+//     console.log(`Manufacturer: ${car.manufacturer}`);
+//     console.log(`Model: ${car.model}`);
+//     console.log(`Year: ${car.year}`);
+//     console.log(`Average Speed: ${car.averageSpeed} mph`);
+// }
+
+// function calculateTravelTime(distance) {
+//     const hours = distance / car.averageSpeed;
+//     const restPeriods = Math.floor(hours / 4);
+//     const totalTime = hours + restPeriods;
+//     return totalTime;
+// }
+
+// displayCarInfo(car);
+// const distance = 200; 
+// const travelTime = calculateTravelTime(distance);
+// console.log(`Time to travel ${distance} miles: ${travelTime} hours`);
+
+//2
+// const fraction = 
+// {
+//     numerator: 0,
+//     denominator: 1
+// };
+// function addFractions(fraction1, fraction2) 
+// {
+//     const result = {};
+//     result.numerator = fraction1.numerator * fraction2.denominator + fraction2.numerator * fraction1.denominator;
+//     result.denominator = fraction1.denominator * fraction2.denominator;
+//     return simplifyFraction(result);
+// }
+// function subtractFractions(fraction1, fraction2) 
+// {
+//     const result = {};
+//     result.numerator = fraction1.numerator * fraction2.denominator - fraction2.numerator * fraction1.denominator;
+//     result.denominator = fraction1.denominator * fraction2.denominator;
+//     return simplifyFraction(result);
+// }
+// function multiplyFractions(fraction1, fraction2) 
+// {
+//     const result = {};
+//     result.numerator = fraction1.numerator * fraction2.numerator;
+//     result.denominator = fraction1.denominator * fraction2.denominator;
+//     return simplifyFraction(result);
+// }
+// function divideFractions(fraction1, fraction2) 
+// {
+//     const result = {};
+//     result.numerator = fraction1.numerator * fraction2.denominator;
+//     result.denominator = fraction1.denominator * fraction2.numerator;
+//     return simplifyFraction(result);
+// }
+// function simplifyFraction(fraction) 
+// {
+//     const gcd = greatestCommonDivisor(fraction.numerator, fraction.denominator);
+//     fraction.numerator /= gcd;
+//     fraction.denominator /= gcd;
+//     return fraction;
+// }
+// function greatestCommonDivisor(a, b) 
+// {
+//     if (b === 0) {
+//         return a;
+//     } else {
+//         return greatestCommonDivisor(b, a % b);
+//     }
+// }
+// const fraction1 = { numerator: 1, denominator: 2 };
+// const fraction2 = { numerator: 3, denominator: 4 };
+// console.log("Addition:", addFractions(fraction1, fraction2));
+// console.log("Subtraction:", subtractFractions(fraction1, fraction2));
+// console.log("Multiplication:", multiplyFractions(fraction1, fraction2));
+// console.log("Division:", divideFractions(fraction1, fraction2));
+
+
+//3
+// const time = 
+// {
+//     hours: 0,
+//     minutes: 0,
+//     seconds: 0
+// };
+// function displayTime(time) 
+// {
+//     const formattedHours = formatTimeUnit(time.hours);
+//     const formattedMinutes = formatTimeUnit(time.minutes);
+//     const formattedSeconds = formatTimeUnit(time.seconds);
+//     console.log(`${formattedHours}:${formattedMinutes}:${formattedSeconds}`);
+// }
+// function formatTimeUnit(unit) 
+// {
+//     return unit < 10 ? `0${unit}` : `${unit}`;
+// }
+// function changeTimeBySeconds(time, seconds) 
+// {
+//     time.seconds += seconds;
+//     normalizeTime(time);
+// }
+// function changeTimeByMinutes(time, minutes) 
+// {
+//     time.minutes += minutes;
+//     normalizeTime(time);
+// }
+// function changeTimeByHours(time, hours) 
+// {
+//     time.hours += hours;
+// }
+// function normalizeTime(time) 
+// {
+//     while (time.seconds >= 60) {
+//         time.seconds -= 60;
+//         time.minutes++;
+//     }
+//     while (time.minutes >= 60) {
+//         time.minutes -= 60;
+//         time.hours++;
+//     }
+//     while (time.hours >= 24) {
+//         time.hours -= 24;
+//     }
+// }
+// time.hours = 20;
+// time.minutes = 30;
+// time.seconds = 45;
+// console.log("Current Time:");
+// displayTime(time);
+// changeTimeBySeconds(time, 30);
+// console.log("\nTime after adding 30 seconds:");
+// displayTime(time);
+// changeTimeByMinutes(time, 10);
+// console.log("\nTime after adding 10 minutes:");
+// displayTime(time);
+// changeTimeByHours(time, 2);
+// console.log("\nTime after adding 2 hours:");
+// displayTime(time);
+</script>
+</html>

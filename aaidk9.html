@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1
+//     class Circle 
+//     {
+//     constructor(radius) 
+//     {
+//         this._radius = radius;
+//     }
+//     get radius() 
+//     {
+//         return this._radius;
+//     }
+
+//     set radius(value) 
+//     {
+//         this._radius = value;
+//     }
+//     get diameter() 
+//     {
+//         return this._radius * 2;
+//     }
+//     calculateArea() 
+//     {
+//         return Math.PI * this._radius ** 2;
+//     }
+//     calculatePerimeter() 
+//     {
+//         return 2 * Math.PI * this._radius;
+//     }
+// }
+// let circle = new Circle(5);
+// console.log("Radius:", circle.radius); 
+// console.log("Diameter:", circle.diameter);
+// circle.radius = 7;
+// console.log("New radius:", circle.radius);
+// console.log("Area:", circle.calculateArea().toFixed(2)); 
+// console.log("Perimeter:", circle.calculatePerimeter().toFixed(2));
+
+//2
+// class HtmlElement 
+// {
+//     constructor(tagName, selfClosing = false, textContent = '') 
+//     {
+//         this.tagName = tagName;
+//         this.selfClosing = selfClosing;
+//         this.textContent = textContent;
+//         this.attributes = [];
+//         this.styles = [];
+//         this.children = [];
+//     }
+
+//     setAttribute(name, value) 
+//     {
+//         this.attributes.push({ name, value });
+//     }
+
+//     setStyle(property, value) 
+//     {
+//         this.styles.push({ property, value });
+//     }
+
+//     addChild(element, atBeginning = false) 
+//     {
+//         if (atBeginning) {
+//             this.children.unshift(element);
+//         } else {
+//             this.children.push(element);
+//         }
+//     }
+
+//     getHtml() 
+//     {
+//         let html = `<${this.tagName}`;
+//         this.attributes.forEach(attribute => {
+//             html += ` ${attribute.name}="${attribute.value}"`;
+//         });
+//         if (this.styles.length > 0) 
+//         {
+//             html += ` style="`;
+//             this.styles.forEach(style => {
+//                 html += `${style.property}: ${style.value}; `;
+//             });
+//             html += `"`;
+//         }
+//         if (this.selfClosing) 
+//         {
+//             html += ` />`;
+//         } 
+//         else 
+//         {
+//             html += `>`;
+//             html += this.textContent;
+//             this.children.forEach(child => {
+//                 html += child.getHtml();
+//             });
+//             html += `</${this.tagName}>`;
+//         }
+//         return html;
+//     }
+// }
+// let div = new HtmlElement('div');
+// div.setAttribute('id', 'container');
+// div.setStyle('color', 'blue');
+// div.setStyle('font-size', '18px');
+// div.addChild(new HtmlElement('p', false, 'Hello, world!'));
+// div.addChild(new HtmlElement('img', true), true);
+// document.write(div.getHtml());
+
+//3
+// class CssClass 
+// {
+//     constructor(className) 
+//     {
+//         this.className = className;
+//         this.styles = [];
+//     }
+//     setStyle(property, value) 
+//     {
+//         const existingStyleIndex = this.styles.findIndex(style => style.property === property);
+//         if (existingStyleIndex !== -1) 
+//         {
+//             this.styles[existingStyleIndex].value = value;
+//         } 
+//         else 
+//         {
+//             this.styles.push({ property, value });
+//         }
+//     }
+//     removeStyle(property) 
+//     {
+//         this.styles = this.styles.filter(style => style.property !== property);
+//     }
+//     getCss() 
+//     {
+//         let css = `.${this.className} {\n`;
+//         this.styles.forEach(style => {
+//             css += `    ${style.property}: ${style.value};\n`;
+//         });
+//         css += `}`;
+//         return css;
+//     }
+// }
+// let myClass = new CssClass('myClass');
+// myClass.setStyle('color', 'red');
+// myClass.setStyle('font-size', '18px');
+// myClass.setStyle('background-color', 'blue');
+// myClass.removeStyle('font-size');
+// console.log(myClass.getCss());
+
+</script>
+</html>
